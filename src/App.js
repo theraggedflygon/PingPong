@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import {Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import NavBar from "./components/navBar";
+import NotFound from "./components/notFound";
+import Streaming from "./components/streaming";
+import Schedule from "./components/schedule";
+import About from "./components/about";
+import Home from "./components/home";
 
-function App() {
+class App extends Component {
+  componentDidMount() {
+    document.title="7th Floor Ping Pong";
+  }
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div
+        style={{
+        backgroundColor: '#191919'}}>
+        <NavBar />
+        <main className="container">
+          <Switch>
+            <Route path="/not-found" component={NotFound} />
+            <Route path="/watch" component={Streaming} />
+            <Route path="/schedule" component={Schedule} />
+            <Route path="/about" component={About} />
+            <Route path="/" exact component={Home} />
+            <Redirect from="/home" to="/" />
+            <Redirect to="/not-found" />
+          </Switch>
+        </main>
+        <footer style={{color: "white"}} align="center">
+          Created by Ben Weiner 2020
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;
