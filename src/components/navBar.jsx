@@ -9,16 +9,16 @@ const NavBar = () => {
                 7th Floor Ping Pong
             </Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link as={NavLink} to="/pingpong/home">
+                <Nav.Link as={NavLink} to="/home">
                     Home
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/pingpong/watch">
+                <Nav.Link as={NavLink} to="/watch">
                     Watch
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/pingpong/schedule">
+                <Nav.Link as={NavLink} to="/schedule">
                     Schedule
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/pingpong/about">
+                <Nav.Link as={NavLink} to="/about">
                     About
                 </Nav.Link>
             </Nav>
