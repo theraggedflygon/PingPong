@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch, Redirect} from "react-router-dom";
+import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./components/navBar";
@@ -16,25 +16,27 @@ class App extends Component {
 
   render() {
   return (
-      <div
-        style={{
-        backgroundColor: '#191919'}}>
-        <NavBar />
-        <main className="container">
-          <Switch>
-            <Route path="/not-found" component={NotFound} />
-            <Route path="/watch" component={Streaming} />
-            <Route path="/schedule" component={Schedule} />
-            <Route path="/about" component={About} />
-            <Route path="/" exact component={Home} />
-            <Redirect from="/home" to="/" />
-            <Redirect to="/not-found" />
-          </Switch>
-        </main>
-        <footer style={{color: "white"}} align="center">
-          Created by Ben Weiner 2020
-        </footer>
-      </div>
+    <HashRouter basename="/" >
+        <div
+          style={{
+          backgroundColor: '#191919'}}>
+          <NavBar />
+          <main className="container">
+            <Switch>
+              <Route path="/not-found" component={NotFound} />
+              <Route path="/watch" component={Streaming} />
+              <Route path="/schedule" component={Schedule} />
+              <Route path="/about" component={About} />
+              <Route path="/" exact component={Home} />
+              <Redirect from="/home" to="/" />
+              <Redirect to="/not-found" />
+            </Switch>
+          </main>
+          <footer style={{color: "white"}} align="center">
+            Created by Ben Weiner 2020
+          </footer>
+        </div>
+      </HashRouter>
     );
   }
 }
