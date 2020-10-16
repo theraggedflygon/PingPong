@@ -22,13 +22,13 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <Switch>
-            <Route path="/not-found" component={NotFound} />
-            <Route path="/watch" component={Streaming} />
-            <Route path="/schedule" component={Schedule} />
-            <Route path="/about" component={About} />
-            <Route path="/" exact component={Home} />
-            <Redirect from="/home" to="/" />
-            <Redirect to="/not-found" />
+            <Route path="/pingpong/not-found" component={NotFound} />
+            <Route path="/pingpong/watch" component={Streaming} />
+            <Route path="/pingpong/schedule" component={Schedule} />
+            <Route path="/pingpong/about" component={About} />
+            <Route path="/pingpong" exact component={Home} />
+            <Redirect from="/pingpong/home" to="/pingpong" />
+            <Redirect to="/pingpong/not-found" />
           </Switch>
         </main>
         <footer style={{color: "white"}} align="center">
