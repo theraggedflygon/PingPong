@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
-import './App.css';
+import React, { Component } from "react";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./components/navBar";
 import NotFound from "./components/notFound";
@@ -11,15 +11,17 @@ import Home from "./components/home";
 
 class App extends Component {
   componentDidMount() {
-    document.title="7th Floor Ping Pong";
+    document.title = "7th Floor Ping Pong";
   }
 
   render() {
-  return (
-    <HashRouter basename="/" >
+    return (
+      <HashRouter basename="/">
         <div
           style={{
-          backgroundColor: '#191919'}}>
+            backgroundColor: "#191919",
+          }}
+        >
           <NavBar />
           <main className="container">
             <Switch>
@@ -32,7 +34,7 @@ class App extends Component {
               <Redirect to="/not-found" />
             </Switch>
           </main>
-          <footer style={{color: "white"}} align="center">
+          <footer style={{ color: "white" }} align="center">
             Created by Ben Weiner 2020
           </footer>
         </div>
