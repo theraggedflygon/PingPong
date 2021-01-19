@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Navbar.Brand as={Link} to="/">
-        7th Floor Ping Pong
+        Middlebrook 7th Floor
       </Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link as={NavLink} to="/home">

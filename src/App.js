@@ -20,6 +20,7 @@ class App extends Component {
         <div
           style={{
             backgroundColor: "#191919",
+            height: 1300,
           }}
         >
           <NavBar />
