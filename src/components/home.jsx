@@ -10,8 +10,8 @@ class Home extends Component {
           <Row>
             <Col>
               <h2 style={{ color: "white" }}>
-                Middlebrook 7th Floor Ping Pong Classic - October 16th-17th,
-                2020
+                Middlebrook 7th Floor Ping Pong Winter Tournament - February
+                26th-27th, 2020
               </h2>
               <iframe
                 src="https://challonge.com/mb7winter/module"
